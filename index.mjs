@@ -35,7 +35,7 @@ const walk=ex2.walk;
 const walk2=ex2.walk.bind(ex2)
 
 // ***********************************************************************************************************************
-// Arrow function
+// Array filter
 const jobs=[
     {id:1, isActive:true},
     {id:2, isActive:true},
@@ -45,11 +45,19 @@ const getAciveJobsFirst=jobs.filter(function(job){return job.isActive});
 // VS 
 const getAciveJobsSecond=jobs.filter(job=>job.isActive)
 
-// ***********************************************************************************************************************
+
 // Array map
 const colors=['green', 'white', 'red'];
 const getColor=colors.map(color=>`<li>${color}</li>`) // ${} it is called template literal
 console.log(getColor);
+
+
+// Array reduce 
+
+const mynum=[{val:10},{val:20},{val:30}]
+
+const totalAmount=mynum.reduce(function(sum, num){return sum + num.val},0)
+
 
 // ***********************************************************************************************************************
 // object destructuring
